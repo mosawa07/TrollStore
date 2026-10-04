@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطاعم ومندي حنيذ عسير</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            goldDark: '#AA7C11',
+                            burgundy: '#800020',
+                            burgundyDark: '#500014',
+                            dark: '#1A1818',
+                            surface: '#242121',
+                            card: '#2A2727',
+                            accent: '#E5A93B'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #1A1818;
+            color: #F3F4F6;
+        }
+        .hero-pattern {
+            background-color: #1a1818;
+            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #1a1818 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0,15px 15px;
+            opacity: 0.95;
+        }
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #1A1818;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 min-h-screen flex flex-col justify-between custom-scroll">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-brand-surface/95 backdrop-blur-md border-b border-brand-gold/20 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-goldDark to-brand-gold flex items-center justify-center text-brand-dark font-black text-xl shadow-md border-2 border-brand-gold/30">
+                    عسير
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl text-brand-gold leading-tight">مطاعم ومندي حنيذ عسير</h1>
+                    <p class="text-xs text-gray-400">طعم التراث الأصيل • فرع الحرازات بجدة</p>
+                </div>
+            </div>
+
+            <!-- Cart Toggle Button -->
+            <button onclick="toggleCart()" class="relative bg-brand-burgundy hover:bg-brand-burgundyDark text-white px-4 py-2 rounded-xl flex items-center gap-2 border border-brand-gold/30 transition-all shadow-md">
+                <i class="fa-solid fa-cart-shopping text-brand-gold text-lg"></i>
+                <span class="font-bold hidden sm:inline">السلة</span>
+                <span id="cart-badge" class="bg-brand-gold text-brand-dark font-black text-xs px-2 py-0.5 rounded-full">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-pattern py-12 px-4 border-b border-brand-gold/10">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            <span class="bg-brand-burgundy/80 text-brand-gold border border-brand-gold/30 text-xs px-3 py-1 rounded-full font-bold inline-block shadow">
+                🔥 الجودة والطعَم العسيري الأصيل
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+                أطعم وألذ <span class="text-brand-gold">حنيذ ومندي</span> في الحرازات
+            </h2>
+            <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">
+                استمتع بوجبات اللحوم والدجاج المضغوط والحنيذ والمندي بأفضل أسعار وجودة عالية.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-3 pt-2">
+                <a href="https://maps.google.com?q=%D9%85%D8%B7%D8%A7%D8%B9%D9%85%20%D9%85%D9%86%D8%AF%D9%8A%20%D8%AD%D9%86%D9%8A%D8%B0%20%D8%B9%D8%B3%D9%8A%D8%B1%D8%8C%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D8%B2%D8%A7%D8%AA,%20%D8%AC%D8%AF%D8%A9%2021442&ftid=0x15c22db388e050f5:0x4ba0c41c475c164a" target="_blank" class="bg-brand-surface border border-brand-gold/40 hover:border-brand-gold text-brand-gold px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 transition-all">
+                    <i class="fa-solid fa-location-dot text-red-500"></i>
+                    موقعنا على الخريطة
+                </a>
+                <a href="https://wa.me/966508705029" target="_blank" class="bg-green-700 hover:bg-green-800 text-white px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 transition-all shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    الطلب المباشر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content & Menu -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow">
+        <!-- Categories Filter -->
+        <div class="flex items-center justify-center gap-2 overflow-x-auto pb-4 mb-8 custom-scroll">
+            <button onclick="filterCategory('all')" class="cat-btn active bg-brand-gold text-brand-dark font-extrabold px-5 py-2 rounded-xl text-sm transition-all whitespace-nowrap shadow-md">
+                الكل
+            </button>
+            <button onclick="filterCategory('meats')" class="cat-btn bg-brand-surface hover:bg-brand-card text-gray-300 font-extrabold px-5 py-2 rounded-xl text-sm transition-all whitespace-nowrap border border-brand-gold/10">
+                🍗 قسم اللحوم والذبائح
+            </button>
+            <button onclick="filterCategory('chicken')" class="cat-btn bg-brand-surface hover:bg-brand-card text-gray-300 font-extrabold px-5 py-2 rounded-xl text-sm transition-all whitespace-nowrap border border-brand-gold/10">
+                🐔 قسم الدجاج
+            </button>
+            <button onclick="filterCategory('drinks')" class="cat-btn bg-brand-surface hover:bg-brand-card text-gray-300 font-extrabold px-5 py-2 rounded-xl text-sm transition-all whitespace-nowrap border border-brand-gold/10">
+                🥤 قسم المشروبات
+            </button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Items injected by JS -->
+        </div>
+    </main>
+
+    <!-- Cart Drawer Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/80 z-50 hidden transition-opacity flex justify-end">
+        <div class="bg-brand-surface w-full max-w-md h-full flex flex-col justify-between p-6 border-r border-brand-gold/20 shadow-2xl">
+            <div>
+                <div class="flex items-center justify-between border-b border-gray-700 pb-4 mb-4">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-basket-shopping text-brand-gold text-xl"></i>
+                        <h3 class="text-xl font-extrabold text-white">سلة الطلبات</h3>
+                    </div>
+                    <button onclick="toggleCart()" class="text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+                </div>
+
+                <div id="cart-items" class="space-y-3 max-h-[60vh] overflow-y-auto custom-scroll pr-1">
+                    <!-- Cart items loaded here -->
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4 space-y-4">
+                <div class="flex justify-between items-center text-lg font-bold">
+                    <span>الإجمالي:</span>
+                    <span id="cart-total" class="text-brand-gold text-xl font-black">0 ر.س</span>
+                </div>
+
+                <div class="space-y-2">
+                    <button onclick="sendOrder()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg text-base">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        إرسال الطلب عبر الواتساب
+                    </button>
+                    <button onclick="clearCart()" class="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold py-2 rounded-xl text-sm transition-all">
+                        تفرغ السلة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-surface border-t border-brand-gold/10 py-8 text-center text-sm text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 space-y-3">
+            <p class="font-bold text-brand-gold">مطاعم ومندي حنيذ عسير - فرع الحرازات بجدة</p>
+            <p class="text-xs text-gray-500">ساعات العمل: يومياً من 5:30 صباحاً حتى 2:00 صباحاً</p>
+            <p class="text-xs text-gray-600">جميع الحقوق محفوظة © 2026</p>
+        </div>
+    </footer>
+
+    <!-- Script Logic -->
+    <script>
+        // Data derived from menu[span_0](start_span)[span_0](end_span)
+        const menuItems = [
+            // Meats & Whole Animals[span_1](start_span)[span_1](end_span)
+            { id: 1, name: "نفر لحم مضغوط ذهبي", price: 75, cat: "meats" },
+            { id: 2, name: "نفر لحم مضغوط أبيض", price: 75, cat: "meats" },
+            { id: 3, name: "نفر لحم مندي", price: 75, cat: "meats" },
+            { id: 4, name: "نفر لحم مندي (خاص)", price: 85, cat: "meats" },
+            { id: 5, name: "ربع ذبيحة مضغوط ذهبي", price: 300, cat: "meats" },
+            { id: 6, name: "ربع ذبيحة مضغوط أبيض", price: 300, cat: "meats" },
+            { id: 7, name: "ربع ذبيحة مندي", price: 300, cat: "meats" },
+            { id: 8, name: "ربع ذبيحة حنيذ", price: 340, cat: "meats" },
+            { id: 9, name: "نص ذبيحة مضغوط ذهبي", price: 300, cat: "meats" },
+            { id: 10, name: "نص ذبيحة مضغوط أبيض", price: 600, cat: "meats" },
+            { id: 11, name: "نص ذبيحة مندي", price: 600, cat: "meats" },
+            { id: 12, name: "نص ذبيحة حنيذ", price: 680, cat: "meats" },
+            { id: 13, name: "نص ذبيحة مندي (فاخر)", price: 880, cat: "meats" },
+            { id: 14, name: "ذبيحة مضغوط ذهبي", price: 1200, cat: "meats" },
+            { id: 15, name: "ذبيحة مضغوط أبيض", price: 1200, cat: "meats" },
+            { id: 16, name: "ذبيحة مندي", price: 1200, cat: "meats" },
+            { id: 17, name: "ذبيحة حنيذ", price: 1400, cat: "meats" },
+            { id: 18, name: "ذبيحة جحني", price: 1400, cat: "meats" },
+            { id: 19, name: "نفر عصيدة مع تونة", price: 10, cat: "meats" },
+            { id: 20, name: "نفر عصيدة مع الغنم", price: 85, cat: "meats" },
+
+            // Chicken Section[span_2](start_span)[span_2](end_span)
+            { id: 21, name: "نص دجاج مضغوط ذهبي", price: 20, cat: "chicken" },
+            { id: 22, name: "نص دجاج مضغوط ذيبني", price: 20, cat: "chicken" },
+            { id: 23, name: "نص دجاج مندي مع الرز", price: 20, cat: "chicken" },
+            { id: 24, name: "نص دجاج حنيذ مع الرز", price: 20, cat: "chicken" },
+            { id: 25, name: "نص دجاج محلي بدون رز", price: 14, cat: "chicken" },
+            { id: 26, name: "نص دجاج مندي بدون رز", price: 14, cat: "chicken" },
+            { id: 27, name: "نص دجاج حنيذ بدون رز", price: 14, cat: "chicken" },
+            { id: 28, name: "ربع دجاج مندي مع الرز", price: 11, cat: "chicken" },
+            { id: 29, name: "ربع دجاج حنيذ مع الرز", price: 11, cat: "chicken" },
+            { id: 30, name: "ربع دجاج مندي بدون رز", price: 8, cat: "chicken" },
+            { id: 31, name: "ربع دجاج حنيذ بدون رز", price: 8, cat: "chicken" },
+            { id: 32, name: "نفر رز حنيذ سادة", price: 6, cat: "chicken" },
+
+            // Drinks Section[span_3](start_span)[span_3](end_span)
+            { id: 33, name: "كاسة لبن القرية", price: 3, cat: "drinks" },
+            { id: 34, name: "سفن القرية", price: 9, cat: "drinks" },
+            { id: 35, name: "بيبسي زيرو", price: 1.5, cat: "drinks" },
+            { id: 36, name: "بيبسي (صغير)", price: 2, cat: "drinks" },
+            { id: 37, name: "سفن أب (صغير)", price: 2, cat: "drinks" },
+            { id: 38, name: "حمضيات (صغير)", price: 2, cat: "drinks" },
+            { id: 39, name: "ديو (صغير)", price: 2, cat: "drinks" },
+            { id: 40, name: "ميرندا برتقال (كبير)", price: 5, cat: "drinks" },
+            { id: 41, name: "بيبسي / سفن / حمضيات (250 مل)", price: 2.5, cat: "drinks" },
+            { id: 42, name: "بيبسي / سفن / حمضيات (وسط)", price: 5, cat: "drinks" },
+            { id: 43, name: "بيبسي عائلي / حمضيات / ديو (عائلي)", price: 9, cat: "drinks" },
+            { id: 44, name: "سفن أب عائلي", price: 6, cat: "drinks" }
+        ];
+
+        let cart = [];
+
+        function renderMenu(category = 'all') {
+            const container = document.getElementById('menu-grid');
+            container.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? menuItems 
+                : menuItems.filter(item => item.cat === category);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-brand-card rounded-2xl p-4 border border-brand-gold/10 hover:border-brand-gold/40 transition-all flex flex-col justify-between shadow-lg";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-white">${item.name}</h3>
+                            <span class="bg-brand-gold/10 text-brand-gold font-black text-sm px-2.5 py-1 rounded-lg border border-brand-gold/20 whitespace-nowrap">
+                                ${item.price} ر.س
+                            </span>
+                        </div>
+                    </div>
+                    <button onclick="addToCart(${item.id})" class="mt-4 w-full bg-brand-surface hover:bg-brand-gold hover:text-brand-dark text-brand-gold border border-brand-gold/30 font-bold py-2 rounded-xl text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-plus"></i>
+                        إضافة للسلة
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterCategory(cat) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-gold', 'text-brand-dark');
+                btn.classList.add('bg-brand-surface', 'text-gray-300');
+            });
+            event.target.classList.remove('bg-brand-surface', 'text-gray-300');
+            event.target.classList.add('bg-brand-gold', 'text-brand-dark');
+            renderMenu(cat);
+        }
+
+        function addToCart(id) {
+            const item = menuItems.find(i => i.id === id);
+            const exist = cart.find(i => i.id === id);
+            if (exist) {
+                exist.qty += 1;
+            } else {
+                cart.push({ ...item, qty: 1 });
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const badge = document.getElementById('cart-badge');
+            const totalItems = cart.reduce((acc, i) => acc + i.qty, 0);
+            badge.innerText = totalItems;
+
+            const container = document.getElementById('cart-items');
+            container.innerHTML = '';
+
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-center text-gray-500 py-8">السلة فارغة حالياً</p>`;
+            } else {
+                cart.forEach(item => {
+                    const row = document.createElement('div');
+                    row.className = "bg-brand-dark p-3 rounded-xl flex items-center justify-between border border-gray-800";
+                    row.innerHTML = `
+                        <div>
+                            <h4 class="font-bold text-sm text-white">${item.name}</h4>
+                            <p class="text-xs text-brand-gold font-bold">${item.price * item.qty} ر.س</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="changeQty(${item.id}, -1)" class="w-7 h-7 bg-gray-800 text-white rounded-lg flex items-center justify-center font-bold text-sm">-</button>
+                            <span class="text-sm font-bold w-4 text-center">${item.qty}</span>
+                            <button onclick="changeQty(${item.id}, 1)" class="w-7 h-7 bg-brand-gold text-brand-dark rounded-lg flex items-center justify-center font-bold text-sm">+</button>
+                        </div>
+                    `;
+                    container.appendChild(row);
+                });
+            }
+
+            const totalPrice = cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
+            document.getElementById('cart-total').innerText = totalPrice + ' ر.س';
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== id);
+                }
+            }
+            updateCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function sendOrder() {
+            if (cart.length === 0) {
+                alert('السلة فارغة، يُرجى إضافة أطباق أولاً.');
+                return;
+            }
+
+            let msg = "*طلب جديد من موقع المطعم:*\n\n";
+            cart.forEach(item => {
+                msg += `• ${item.name} (عدد: ${item.qty}) - ${item.price * item.qty} ر.س\n`;
+            });
+
+            const total = cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
+            msg += `\n*الإجمالي:* ${total} ر.س`;
+            
+            const whatsappUrl = `https://wa.me/966508705029?text=${encodeURIComponent(msg)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Initialize
+        renderMenu();
+    </script>
+</body>
+</html>
